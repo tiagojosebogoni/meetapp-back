@@ -22,7 +22,7 @@ class User extends Model {
     return this;
   }
 
-  checPassword(password) {
+  checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
 }
