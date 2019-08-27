@@ -76,11 +76,11 @@ class SubscriptionController {
       });
     }
 
-    /* const subscription = await Subscription.create({
+    const subscription = await Subscription.create({
       user_id,
       meetup_id,
     });
-*/
+
     /**
      * Sempre que um usuário se inscrever no meetup, envie um e-mail ao organizador contendo os dados relacionados ao usuário inscrito.
      */
@@ -109,7 +109,7 @@ class SubscriptionController {
       },
     });
 
-    return res.json('subscription');
+    return res.json(subscription);
   }
 }
 
